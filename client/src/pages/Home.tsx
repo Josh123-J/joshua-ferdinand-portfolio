@@ -261,32 +261,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* About Section with Headshot */}
       <section id="about" className="bg-white py-20 border-t border-border">
         <div className="container">
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-1 h-8 bg-accent-orange" />
+              <h2 className="serif-display text-4xl">About Joshua</h2>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            <div className="md:col-span-1">
+              <div className="sticky top-24">
+                <img 
+                  src="/images/joshua-headshot.jpg" 
+                  alt="Joshua Ferdinand"
+                  className="w-full rounded-lg editorial-shadow"
+                />
+                <div className="mt-6 p-4 bg-accent-orange/10 rounded-lg">
+                  <p className="text-sm text-accent-orange font-medium">📧 Get in Touch</p>
+                  <a href="mailto:Joshuaferdinand512@gmail.com" className="text-sm text-secondary hover:text-accent-orange transition mt-2 block">
+                    Joshuaferdinand512@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-2">
+              <div className="mb-12">
+                <h3 className="serif-display text-2xl mb-6">Professional Summary</h3>
+                <p className="text-secondary leading-relaxed mb-4">
+                  Joshua Ferdinand is a prolific journalist and content strategist with a proven track record of producing 773+ high-quality published articles. With a unique background combining Medical Laboratory Science education and extensive journalism experience, he excels at translating complex medical and scientific topics into engaging, accessible content for diverse audiences.
+                </p>
+                <p className="text-secondary leading-relaxed">
+                  His expertise spans digital journalism, SEO-driven content strategy, rigorous fact-checking, and in-depth political analysis. Based in Port Harcourt, Nigeria, Joshua has contributed significantly to Report Afrique's coverage of African and global news, with particular strength in health policy, political developments, and investigative reporting.
+                </p>
+              </div>
+
+              <div className="mb-12">
+                <h3 className="serif-display text-2xl mb-6">Core Competencies</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.map((skill) => (
+                    <Badge 
+                      key={skill}
+                      variant="secondary"
+                      className="bg-accent-orange/10 text-accent-orange hover:bg-accent-orange/20 transition-colors px-4 py-2 text-sm"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-1 h-8 bg-accent-orange" />
-              <h2 className="serif-display text-4xl">Expertise</h2>
+              <h2 className="serif-display text-4xl">Career Experience</h2>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="serif-display text-2xl mb-6">Core Competencies</h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill) => (
-                  <Badge 
-                    key={skill}
-                    variant="secondary"
-                    className="bg-accent-orange/10 text-accent-orange hover:bg-accent-orange/20 transition-colors px-4 py-2 text-sm"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
             <div>
               <h3 className="serif-display text-2xl mb-6">Professional Background</h3>
               <div className="space-y-6">
